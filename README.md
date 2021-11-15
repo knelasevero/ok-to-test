@@ -1,6 +1,7 @@
 # Ok To Test
 > _Example workflow configuration_ showing how to use GitHub Actions secrets in pull requests from forks 🍴🔑
 
+
 ## Summary
 An [`Ok To Test`](https://github.com/imjohnbo/ok-to-test/blob/master/.github/workflows/ok-to-test.yml) workflow is configured so that when someone with write access to this repository comments `ok-to-test sha=<head-sha>` on a pull request from a fork, a "privileged" [`Integration tests`](https://github.com/imjohnbo/ok-to-test/blob/master/.github/workflows/integration.yml) workflow needing [secrets](https://docs.github.com/en/free-pro-team@latest/actions/reference/encrypted-secrets#about-encrypted-secrets) is triggered. In parallel, a "non-privileged" [`Unit tests`](https://github.com/imjohnbo/ok-to-test/blob/master/.github/workflows/unit.yml) workflow not needing secrets is triggered on any pull request.
 
